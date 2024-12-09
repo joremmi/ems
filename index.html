@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to ERMS</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Adjust the path as needed -->
+    <style>
+        @font-face {
+            font-family: 'Raleway';
+            src: url('../../assets/fonts/Raleway/static/Raleway-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Raleway';
+            src: url('../../assets/fonts/Raleway/static/Raleway-Bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        :root {
+            --bg-dark: #1A1A1A;
+            --bg-card: #242424;
+            --primary-green: #34BE82;
+            --text-primary: #FFFFFF;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --sidebar-bg: #34BE82;
+            --sidebar-width: 220px;
+
+            /* Font sizes */
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 0.938rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.5rem;
+
+            /* Font variables */
+            --heading-font: 'Raleway', sans-serif;
+            --body-font: 'Raleway', sans-serif;
+        }
+
+        li {
+            list-style: none;
+            z-index: 3;
+            position: relative;
+        }
+
+        #logo {
+            height: 3pc;
+            filter: hue-rotate(24);
+        }
+
+        body {
+            background-image: url(assets/pattern/pattern.svg);
+            background-repeat: repeat;
+            background-size: 50px auto;
+            background-origin: content-box;
+            color: var(--text-primary);
+            font-family: var(--body-font);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+
+        .main-content {
+            display: flex;
+            padding: 2.5rem;
+            height: 100vh;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 2pc;
+            justify-content: center;
+        }
+
+        [data-theme="light"] .main-content {
+            background-image: url(assets/pattern/pattern-light.svg);
+        }
+
+        .quick-action-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: var(--text-sm);
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-action-btn:hover {
+            border-color: var(--primary-green);
+            background: rgba(52, 190, 130, 0.1);
+        }
+
+        .quick-action-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s;
+        }
+
+        .quick-action-btn:active::after {
+            width: 200px;
+            height: 200px;
+        }
+
+        .side-div {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            width: 35vw;
+            gap: 2rem;
+            flex-direction: column;
+        }
+
+        .img-div {
+            height: 100vh;
+            width: 65vw;
+            background-image: url(assets/images/meeting.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            mix-blend-mode: luminosity;
+            filter: opacity(0.5);
+        }
+
+        .sidebar-header {
+            font-family: var(--heading-font);
+            font-size: var(--text-lg);
+            color: var(--bg-dark);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--primary-green);
+            border-radius: 1pc;
+            justify-content: start;
+            padding: 1pc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-content">
+        <div class="side-div">
+            <div class="sidebar-header">
+                <img src="/assets/images/ems-logo.png" id="logo" alt="EMS Logo">
+                <span class="bold">ERMS</span>
+            </div>
+            <h1>Welcome to the Educational Resource Management System</h1>
+            <p class="desc">
+                Welcome to our website! Here, you can explore a wide range of resources and services designed to enhance
+                your experience. Whether you're looking for information, community support, or the latest updates, we
+                have something for everyone. Join us on this journey and discover all that we have to offer!
+            </p>
+            <button class="quick-action-btn" onclick="location.href='pages/home.html'">Get Started</button>
+        </div>
+        <div class="img-div"></div>
+    </div>
+</body>
+
+</html>
