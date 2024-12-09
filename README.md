@@ -1,4 +1,4 @@
-# Educational Management System (EMS)
+# Educational Resource Management System (ERMS)
 
 ## Overview
 
@@ -27,36 +27,22 @@ To run the EMS locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/joremmi/ems.git
+   git clone https://github.com/yourusername/ems.git
    cd ems
 
 Install dependencies: Ensure you have a local server set up. You can use tools like Live Server for Visual Studio Code or any other local server setup.
 
-Open the project: Open the index.html file in your browser or start your local server and navigate to <http://localhost:PORT/pages/home.html>.
+Open the project: Open the index.html file in your browser or start your local server and navigate to <http://localhost:PORT/index.html>.
 
 ## Running the Application
+
 Start your local server (if using one).
 
-Navigate to the home page: Open your browser and go to <http://localhost:PORT/pages/home.html>.
+Navigate to the home page
+Click the Get Started button or
+Open your browser and go to <http://localhost:PORT/pages/home.html>.
 
 Explore the features: Use the sidebar to navigate through different sections of the application.
-
-Fonts
-This project uses the following fonts:
-
-Raleway: A clean and modern sans-serif font.
-Montserrat: A versatile sans-serif font for headings and body text.
-Font Installation
-To use the fonts locally, ensure the font files are placed in the assets/fonts directory as follows:
-
-Raleway:
-
-assets/fonts/Raleway/static/Raleway-Regular.ttf
-assets/fonts/Raleway/static/Raleway-Bold.ttf
-Montserrat:
-
-assets/fonts/Montserrat/static/Montserrat-Regular.ttf
-assets/fonts/Montserrat/static/Montserrat-Bold.ttf
 
 ## License
 
@@ -67,8 +53,3 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 
 Thank you for using the Educational Management System!
 
-### Notes
-
-- Replace `https://github.com/yourusername/ems.git` with the actual URL of your repository.
-- Update the contact information with your actual name and email.
-- Adjust any other sections as necessary to fit your project's specifics.
