@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMS - Teacher Resources</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/pages/teacher-resources.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar will be populated by navigation.js -->
+        <div class="sidebar">
+            <div class="sidebar-menu-container">
+                <div class="sidebar-header">
+                    <img src="../assets/images/ems-logo.png" id="logo" alt="EMS Logo">
+                    <span class="bold">ERMS</span>
+                </div>
+                <ul class="sidebar-menu"></ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <div class="header-title">
+                    <h1>Teacher_Resources_TECH120_Fa24</h1>
+                    <p>Access and manage teaching materials</p>
+                </div>
+                <div class="header-actions">
+                    <input type="text" placeholder="Search resources..." class="search-input">
+                    <button class="btn-primary" onclick="openUploadModal()">
+                        <i class="fas fa-upload"></i> Upload Resource
+                    </button>
+                </div>
+            </div>
+
+            <!-- Resource Categories -->
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Lesson Plans</h3>
+                    <p>125 items</p>
+                    <button class="view-btn">View All</button>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Materials</h3>
+                    <p>48 items</p>
+                    <button class="view-btn">View All</button>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Worksheets</h3>
+                    <p>234 items</p>
+                    <button class="view-btn">View All</button>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Assessment Tools</h3>
+                    <p>89 items</p>
+                    <button class="view-btn">View All</button>
+                </div>
+            </div>
+
+            <!-- Recent Uploads Section -->
+            <div class="section-header">
+                <h2>Recent Uploads</h2>
+                <button class="btn-secondary">View All</button>
+            </div>
+
+            <div class="resources-table">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Uploaded By</th>
+                            <th>Date</th>
+                            <th>Size</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mathematics Lesson Plan - Grade 10</td>
+                            <td>Lesson Plans</td>
+                            <td>John Smith</td>
+                            <td>2024-03-15</td>
+                            <td>2.3 MB</td>
+                            <td class="actions-cell">
+                                <button class="action-btn" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="action-btn" title="Share">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                                <button class="action-btn" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Physics Lab Experiments - Video Series</td>
+                            <td>Video Materials</td>
+                            <td>Sarah Johnson</td>
+                            <td>2024-03-14</td>
+                            <td>156 MB</td>
+                            <td class="actions-cell">
+                                <button class="action-btn" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="action-btn" title="Share">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                                <button class="action-btn" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>English Literature Quiz - Term 1</td>
+                            <td>Assessment Tools</td>
+                            <td>Michael Brown</td>
+                            <td>2024-03-14</td>
+                            <td>542 KB</td>
+                            <td class="actions-cell">
+                                <button class="action-btn" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="action-btn" title="Share">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                                <button class="action-btn" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Biology Homework - Chapter 5</td>
+                            <td>Worksheets</td>
+                            <td>Emily Davis</td>
+                            <td>2024-03-13</td>
+                            <td>1.1 MB</td>
+                            <td class="actions-cell">
+                                <button class="action-btn" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="action-btn" title="Share">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                                <button class="action-btn" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Chemistry Lab Safety Guidelines</td>
+                            <td>Lesson Plans</td>
+                            <td>David Wilson</td>
+                            <td>2024-03-13</td>
+                            <td>3.2 MB</td>
+                            <td class="actions-cell">
+                                <button class="action-btn" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="action-btn" title="Share">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                                <button class="action-btn" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Modal -->
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Upload Resource</h2>
+                <button class="close-btn" onclick="closeUploadModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="uploadForm">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select required>
+                            <option value="">Select Category</option>
+                            <option value="lesson-plans">Lesson Plans</option>
+                            <option value="video-materials">Video Materials</option>
+                            <option value="worksheets">Worksheets</option>
+                            <option value="assessment-tools">Assessment Tools</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>File</label>
+                        <input type="file" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="closeUploadModal()">Cancel</button>
+                        <button type="submit" class="btn-primary">Upload</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../js/teacher-resources.js"></script>
+    <script type="module" src="../js/navigation.js"></script>
+    <script type="module" src="../js/theme.js"></script>
+    <script type="module" src="../js/config.js"></script>
+</body>
+</html>

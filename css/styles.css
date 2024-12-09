@@ -1,0 +1,40 @@
+:root {
+    --bg-dark: #1A1A1A;
+    --bg-card: #242424;
+    --primary-green: #34BE82;
+    --text-primary: #FFFFFF;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --sidebar-bg: #34BE82;
+    --sidebar-width: 220px;
+
+    /* Font sizes */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 0.938rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.5rem;
+}
+
+[data-theme="light"] {
+    --bg-dark: #f5f5f5;
+    --bg-card: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: rgba(0, 0, 0, 0.7);
+    --border-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.1s, color 0.1s, border-color 0.1s;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--body-font);
+    margin: 0;
+    line-height: 1.5;
+} 

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMS - Library Management</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/pages/library-management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-menu-container">
+              <div class="sidebar-header">
+                <img src="../assets/images/ems-logo.png" id="logo" alt="EMS Logo"> 
+                <span class="bold">ERMS</span>
+              </div>
+              <ul class="sidebar-menu">
+                <li><a href="./home.html" class="active">
+                  <i class="fas fa-home"></i> Dashboard
+                </a></li>
+                <li><a href="./student-records.html">
+                  <i class="fas fa-user-graduate"></i> Student Records
+                </a></li>
+                <li><a href="./library-management.html">
+                  <i class="fas fa-book"></i> Library Management
+                </a></li>
+                <li><a href="./teacher-resources.html">
+                  <i class="fas fa-chalkboard-teacher"></i> Teacher Resources
+                </a></li>
+                <li><a href="./parent-communication.html">
+                  <i class="fas fa-comments"></i> Parent Communication
+                </a></li>
+                <li><a href="./financial-operations.html">
+                  <i class="fas fa-money-bill-wave"></i> Financial Operations
+                </a></li>
+                <li><a href="./contact-us.html">
+                  <i class="fas fa-envelope"></i> Contact Us
+                </a></li>
+              </ul>
+            </div>
+          </div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <div class="header-title">
+                    <h1>Library_Management_TECH120_Fa24</h1>
+                    <p>Manage books and borrowing records</p>
+                </div>
+                <div class="header-actions">
+                    <input type="text" placeholder="Search books..." class="search-input">
+                    <button class="btn-primary" onclick="openAddBookModal()">
+                        <i class="fas fa-plus"></i> Add Book
+                    </button>
+                </div>
+            </div>
+
+            <!-- Library Stats -->
+            <div class="stats-grid">
+                <div class="stats-card">
+                    <div class="stats-header">
+                        <h3>Total Books</h3>
+                        <i class="fas fa-book stats-icon"></i>
+                    </div>
+                    <div class="stats-value">5,678</div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-header">
+                        <h3>Books Borrowed</h3>
+                        <i class="fas fa-hand-holding-heart stats-icon"></i>
+                    </div>
+                    <div class="stats-value">234</div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-header">
+                        <h3>Overdue Books</h3>
+                        <i class="fas fa-clock stats-icon"></i>
+                    </div>
+                    <div class="stats-value">12</div>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('books')">Book Catalog</button>
+                <button class="tab-btn" onclick="switchTab('borrowed')">Borrowed Books</button>
+                <button class="tab-btn" onclick="switchTab('overdue')">Overdue Books</button>
+            </div>
+
+            <!-- Book Catalog Table -->
+            <div id="books" class="tab-content active">
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Book ID</th>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BK001</td>
+                                <td>Introduction to Programming</td>
+                                <td>John Smith</td>
+                                <td>Computer Science</td>
+                                <td><span class="status-badge available">Available</span></td>
+                                <td class="actions-cell">
+                                    <button class="action-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="action-btn" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BK002</td>
+                                <td>Advanced Mathematics</td>
+                                <td>Sarah Johnson</td>
+                                <td>Mathematics</td>
+                                <td><span class="status-badge borrowed">Borrowed</span></td>
+                                <td class="actions-cell">
+                                    <button class="action-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="action-btn" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BK003</td>
+                                <td>Physics: Theory and Practice</td>
+                                <td>Michael Brown</td>
+                                <td>Physics</td>
+                                <td><span class="status-badge available">Available</span></td>
+                                <td class="actions-cell">
+                                    <button class="action-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="action-btn" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BK004</td>
+                                <td>World Literature Anthology</td>
+                                <td>Emily Davis</td>
+                                <td>Literature</td>
+                                <td><span class="status-badge overdue">Overdue</span></td>
+                                <td class="actions-cell">
+                                    <button class="action-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="action-btn" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BK005</td>
+                                <td>Web Development Fundamentals</td>
+                                <td>David Wilson</td>
+                                <td>Computer Science</td>
+                                <td><span class="status-badge borrowed">Borrowed</span></td>
+                                <td class="actions-cell">
+                                    <button class="action-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="action-btn" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BK006</td>
+                                <td>Database Management Systems</td>
+                                <td>Lisa Chen</td>
+                                <td>Computer Science</td>
+                                <td><span class="status-badge available">Available</span></td>
+                                <td class="actions-cell">
+                                    <button class="action-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="action-btn" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Borrowed Books Table -->
+            <div id="borrowed" class="tab-content">
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Book ID</th>
+                                <th>Title</th>
+                                <th>Borrowed By</th>
+                                <th>Borrow Date</th>
+                                <th>Due Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Add borrowed books data -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Overdue Books Table -->
+            <div id="overdue" class="tab-content">
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Book ID</th>
+                                <th>Title</th>
+                                <th>Borrowed By</th>
+                                <th>Due Date</th>
+                                <th>Days Overdue</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Add overdue books data -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <span class="pagination-ellipsis">...</span>
+                <button class="pagination-btn">10</button>
+                <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Book Modal -->
+    <div id="addBookModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Book</h2>
+                <button class="close-btn" onclick="closeAddBookModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="addBookForm">
+                    <div class="form-group">
+                        <label>Book ID</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Author</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select required>
+                                <option value="">Select Category</option>
+                                <option value="cs">Computer Science</option>
+                                <option value="math">Mathematics</option>
+                                <option value="physics">Physics</option>
+                                <option value="literature">Literature</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Quantity</label>
+                            <input type="number" min="1" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea rows="3"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="closeAddBookModal()">Cancel</button>
+                        <button type="submit" class="btn-primary">Add Book</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../js/library-management.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/config.js"></script>
+</body>
+</html>

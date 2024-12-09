@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMS - Dashboard</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/pages/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="../js/config.js"></script>
+  <script src="../js/theme.js" type="module"></script>
+  <script src="../js/home.js" type="module"></script>
+  <script type="module">
+    import { initializeNavigation } from '../js/navigation.js';
+    import { initializeTheme } from '../js/theme.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeTheme();
+      initializeNavigation();
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="sidebar-menu-container">
+        <div class="sidebar-header">
+          <img src="../assets/images/ems-logo.png" id="logo" alt="EMS Logo">
+          <span class="bold">ERMS</span>
+        </div>
+        <ul class="sidebar-menu" role="navigation">
+          <!-- Will be populated by JS -->
+        </ul>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="header">
+        <div class="header-title">
+          <h1>Educational Management System_TECH120_Fa24</h1>
+        </div>
+        <div class="header-actions">
+          <input type="text" placeholder="Search resources..." class="search-input">
+        </div>
+      </div>
+      <div class="stats-container">
+        <div class="stats-card">
+          <div class="stats-header">
+            <h3>Student Records</h3>
+          </div>
+          <div class="stats-value">1,234</div>
+          <div class="stats-change positive">+12% from last month</div>
+        </div>
+        <div class="stats-card">
+          <div class="stats-header">
+            <h3>Library Books</h3>
+          </div>
+          <div class="stats-value">5,678</div>
+          <div class="stats-change positive">+8% from last month</div>
+        </div>
+        <div class="stats-card">
+          <div class="stats-header">
+            <h3>Teacher Resources</h3>
+          </div>
+          <div class="stats-value">892</div>
+          <div class="stats-change positive">+15% from last month</div>
+        </div>
+        <div class="stats-card">
+          <div class="stats-header">
+            <h3>Parent Messages</h3>
+          </div>
+          <div class="stats-value">456</div>
+          <div class="stats-change negative">-3% from last month</div>
+        </div>
+      </div>
+      <div class="recent-activities">
+        <h3>Recent Activities</h3>
+        <div class="activity-item">
+          <div class="activity-icon">
+            <i class="fas fa-user-plus"></i>
+          </div>
+          <div class="activity-content">
+            <p>New student registration completed</p>
+            <div class="activity-time">2 hours ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <div class="activity-content">
+            <p>25 new books added to library</p>
+            <div class="activity-time">5 hours ago</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="activity-content">
+            <p>Monthly financial report generated</p>
+            <div class="activity-time">1 day ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="quick-actions">
+        <button class="quick-action-btn">Add Student</button>
+        <button class="quick-action-btn">Add Book</button>
+        <button class="quick-action-btn">Send Notice</button>
+        <button class="quick-action-btn">Generate Report</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
