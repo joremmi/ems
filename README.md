@@ -27,14 +27,14 @@ To run the EMS locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/ems.git
+   git clone https://github.com/joremmi/ems.git
    cd ems
 
 Install dependencies: Ensure you have a local server set up. You can use tools like Live Server for Visual Studio Code or any other local server setup.
 
 Open the project: Open the index.html file in your browser or start your local server and navigate to <http://localhost:PORT/pages/home.html>.
 
-Running the Application
+## Running the Application
 Start your local server (if using one).
 
 Navigate to the home page: Open your browser and go to <http://localhost:PORT/pages/home.html>.
